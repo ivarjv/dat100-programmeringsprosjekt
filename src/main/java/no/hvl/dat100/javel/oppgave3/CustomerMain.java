@@ -14,11 +14,9 @@ public class CustomerMain {
         System.out.println();
 
 
-            String name = "Nils";
-            String email = "Nils123@hotamil.com";
-            int customer_id = 81549300;
-            PowerAgreementType PowerAgreementType = SPOTPRICE;
 
+
+            Customer Customer= new Customer("Nils", "Nils123@hotamil.com", 81549300, SPOTPRICE);
 System.out.println(Customer);
 
         /*
