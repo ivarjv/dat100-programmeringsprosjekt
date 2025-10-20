@@ -2,6 +2,8 @@ package no.hvl.dat100.javel.oppgave3;
 
 import no.hvl.dat100.javel.oppgave4.Customers;
 
+import static no.hvl.dat100.javel.oppgave3.PowerAgreementType.SPOTPRICE;
+
 public class CustomerMain {
 
     public static void main(String[] args) {
@@ -10,6 +12,14 @@ public class CustomerMain {
         System.out.println("OPPGAVE 3");
         System.out.println("==============");
         System.out.println();
+
+
+            String name = "Nils";
+            String email = "Nils123@hotamil.com";
+            int customer_id = 81549300;
+            PowerAgreementType PowerAgreementType = SPOTPRICE;
+
+System.out.println(Customer);
 
         /*
         TODO
