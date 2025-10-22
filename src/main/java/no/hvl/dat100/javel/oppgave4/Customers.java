@@ -7,10 +7,8 @@ public class Customers {
     private Customer[] customers;
 
     // a) Complete constructor
-    public Customers() {
-
-        // TODO
-        customers = new Customer[100];
+    public Customers(int size) {
+        customers = new Customer [size];
     }
 
     // b) count number of non-null references
@@ -18,8 +16,11 @@ public class Customers {
 
 
         int count = 0;
-
-        // TODO
+        for (Customer c : customers) {
+            if (c != null) {
+                count++;
+            }
+        }
 
         return count;
     }
@@ -30,7 +31,14 @@ public class Customers {
         boolean funnet = false;
         Customer c = null;
 
-        // TODO
+        int i = 0;
+        while (i < customers.length && !funnet) {
+            if (customers[i] != null && customers[i].getCustomerId() == customer_id) {
+                funnet = true;
+                c = customers[i];
+            }
+            i++;
+        }
 
         return c;
     }
@@ -39,8 +47,15 @@ public class Customers {
     public boolean addCustomer(Customer c) {
 
         boolean inserted = false;
+        int i = 0;
 
-        // TODO
+        while (i < customers.length && !inserted) {
+            if (customers[i] == null) {
+                customers[i] = c;
+                inserted= true;
+            }
+            i++;
+        }
 
         return inserted;
     }
@@ -50,8 +65,16 @@ public class Customers {
 
         boolean deleted = false;
         Customer c = null;
-
-        // TODO
+        int i = 0;
+        
+        while (i < customers.length && !deleted) {
+            if (customers[i] != null && customers[i].getCustomerId() == customer_id) {
+                c = customers[i];
+                customers[i] = null;
+                deleted = true;
+            }
+            i++;
+        }
 
         return c;
     }
@@ -59,10 +82,18 @@ public class Customers {
     // f) return reference table with all customers
     public Customer[] getCustomers() {
 
-        Customer[] customers = null;
+        int count = countNonNull();
 
-        // TODO
+        Customer[] result = new Customer[count];
 
-        return customers;
+        int j = 0;
+        for (int i = 0; i < customers.length; i++) {
+            if (customers[i] != null) {
+                result[j] = customers[i];
+                j++;
+            }
+        }
+
+        return result;
     }
 }

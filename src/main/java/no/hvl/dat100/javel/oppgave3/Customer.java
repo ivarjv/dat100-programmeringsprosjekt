@@ -46,4 +46,8 @@ public class Customer {
     public String toString() {
         return names + " " + emails + " " + customer_ids + " " + agreements;
     }
+
+    public int getCustomerId() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
