@@ -16,6 +16,11 @@ public class Invoice {
 
 
     public Invoice(Customer c, String month, double[][] usage, double[][] power_prices) {
+        month = "september";
+        usage = ;
+        price = ;
+        amount = ;
+
 
         // TODO - konstruktør
 
