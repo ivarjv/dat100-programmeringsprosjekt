@@ -52,7 +52,7 @@ public class Customers {
         while (i < customers.length && !inserted) {
             if (customers[i] == null) {
                 customers[i] = c;
-                inserted= true;
+                inserted = true;
             }
             i++;
         }
