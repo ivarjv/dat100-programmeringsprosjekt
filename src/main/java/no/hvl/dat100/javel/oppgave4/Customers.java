@@ -10,7 +10,7 @@ public class Customers {
     public Customers() {
 
         // TODO
-
+        customers = new Customer[100];
     }
 
     // b) count number of non-null references
