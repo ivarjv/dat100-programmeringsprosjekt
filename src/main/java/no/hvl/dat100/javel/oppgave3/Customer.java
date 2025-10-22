@@ -1,15 +1,17 @@
 package no.hvl.dat100.javel.oppgave3;
 
+import static no.hvl.dat100.javel.oppgave3.PowerAgreementType.SPOTPRICE;
+
 public class Customer {
     String names;
     String emails;
     int customer_ids;
     PowerAgreementType agreements;
-    public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
-        names = name;
-        emails = email;
-        customer_ids = customer_id;
-        agreements = agreement;
+    public Customer() {
+        names = "Nils";
+        emails = "Nils123@hotamil.com";
+        customer_ids = 81549300;
+        agreements = SPOTPRICE;
     }
 
     //set
@@ -22,7 +24,20 @@ public class Customer {
 
     //get
     public String getCustomer() {
-        return names + emails + customer_ids+ agreements;
+        return names ;
+    }
+    public String getNames() {
+    return names;
+    }
+    public String getEmails() {
+        return emails;
+    }
+    public int getCustomer_ids() {
+        return customer_ids;
+    }
+
+    public PowerAgreementType getAgreements() {
+        return agreements;
     }
 
     // TODO - getter/setter methods for all objectvariables

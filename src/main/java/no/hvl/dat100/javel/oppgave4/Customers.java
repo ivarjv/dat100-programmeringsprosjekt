@@ -7,7 +7,7 @@ public class Customers {
     private Customer[] customers;
 
     // a) Complete constructor
-    public Customers(int size) {
+    public Customers() {
 
         // TODO
 
