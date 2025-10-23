@@ -17,13 +17,40 @@ public class MonthMain {
         System.out.println("==============");
         System.out.println();
 
-        /*
-        TODO
 
-         Write code that tests the methods you implement in the MonthlyPower class
-         Remember to teste the methods as you implement them
-         Remember to also to check that you get the expected results
-         */
+     // a)
+        System.out.println("a) Strømforbruk for måneden:");
+        MonthlyPower.print_PowerUsage(power_usage_month);
+        System.out.println();
 
+     // b)
+        System.out.println("b) Strømpris for måneden:");
+        MonthlyPower.print_PowerPrices(power_prices_month);
+        System.out.println();
+
+     // c)
+        double totalUsage = MonthlyPower.computePowerUsage(power_usage_month);
+        System.out.println("c) Total strømforbruk: " + totalUsage + " kWh");
+        System.out.println();
+
+     // d)
+        double threshold = 1000;
+        boolean exceeded = MonthlyPower.exceedThreshold(power_usage_month, threshold);
+        System.out.println("d Strømforbruk grense overskredet(" + threshold + " kWh): " + exceeded);
+        System.out.println();
+
+     // e)
+        double totalSpotPrice = MonthlyPower.computeSpotPrice(power_usage_month, power_prices_month);
+        System.out.println("e) Total strømpris for måneden: " + totalSpotPrice + " kr");
+        System.out.println();
+
+     // f)
+        double totalSupport = MonthlyPower.computePowerSupport(power_usage_month, power_prices_month);
+        System.out.println("f Total strømstøtte for måneden: " + totalSupport + " kr");
+        System.out.println();
+
+     // g)
+        double totalNorgespris = MonthlyPower.computeNorgesPrice(power_usage_month);
+        System.out.println("g) Total strømpris for måneden med Norgespris: " + totalNorgespris + " kr");
     }
 }
